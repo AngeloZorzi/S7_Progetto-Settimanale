@@ -67,3 +67,9 @@ gameForm.addEventListener("submit", function (e) {
       alert("Errore durante il salvataggio");
     });
 });
+const form = document.getElementById("game-form");
+const resetBtn = document.getElementById("resetForm");
+
+resetBtn.addEventListener("click", () => {
+  form.reset();
+});

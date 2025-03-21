@@ -4,6 +4,11 @@ const currentYear = function () {
 };
 currentYear();
 
+const hideSpinner = function () {
+  const div = document.getElementById("spinner-container");
+  div.classList.add("d-none");
+};
+
 const APIUrl = "https://striveschool-api.herokuapp.com/api/product/";
 
 const getProducts = function () {
@@ -22,6 +27,7 @@ const getProducts = function () {
     })
     .then((data) => {
       console.log("DATI RICEVUTI", data);
+      hideSpinner();
       const row = document.getElementById("gameRow");
       data.forEach((game) => {
         row.innerHTML =
@@ -29,7 +35,9 @@ const getProducts = function () {
           `
   <div class="col-6 col-md-4 col-lg-3 mb-3">
   <div class="card bg-color-2 text-light border-0 d-flex flex-column">
-    <img src="${game.imageUrl}" class="card-img-top" alt="${game.name}">
+    <a href="./details.html?id=${game._id}">
+        <img src="${game.imageUrl}" class="card-img-top" alt="${game.name}" style="cursor:pointer;">
+      </a>
     <div class="card-body d-flex flex-column justify-content-between">
       <h5 class="card-title text-color-1">${game.name}</h5>
       <p class="card-text">${game.description}</p>
