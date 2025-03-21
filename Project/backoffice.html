@@ -39,7 +39,7 @@
                 <a
                   class="nav-link active text-color-7"
                   aria-current="page"
-                  href="#"
+                  href="./homepage.html"
                   >Home</a
                 >
               </li>
@@ -54,24 +54,31 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Console
+                  Games
                 </a>
                 <ul class="dropdown-menu bg-color-2">
                   <li>
-                    <a class="dropdown-item text-color-8" href="#">NES</a>
+                    <a class="dropdown-item text-color-8" href="#">Nintendo</a>
                   </li>
                   <li>
-                    <a class="dropdown-item text-color-8" href="#">SNES</a>
+                    <a class="dropdown-item text-color-8" href="#"
+                      >PlayStation 1</a
+                    >
                   </li>
-                  <li><hr class="dropdown-divider bg-color-4" /></li>
+
+                  <li>
+                    <a class="dropdown-item text-color-8" href="#"
+                      >PlayStation 2</a
+                    >
+                  </li>
                   <li>
                     <a class="dropdown-item text-color-8" href="#">Game Boy</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled text-color-3" aria-disabled="true"
-                  >Coming Soon</a
+                <a class="nav-link text-color-9" href="./backoffice.html"
+                  >Administration</a
                 >
               </li>
             </ul>
@@ -94,7 +101,87 @@
         </div>
       </nav>
     </header>
-    <main class="flex-grow-1"></main>
+    <main class="flex-grow-1">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-6 col-md-8">
+            <form class="py-2" id="game-form">
+              <div class="mb-2">
+                <label for="name" class="form-label text-color-5"
+                  >Titolo del Gioco</label
+                >
+                <input
+                  type="text"
+                  class="form-control bg-color-4 text-color-5 border-color-7"
+                  id="name"
+                  placeholder="Super Mario Bros"
+                  required
+                />
+              </div>
+
+              <div class="mb-2">
+                <label for="description" class="form-label text-color-5"
+                  >Descrizione</label
+                >
+                <textarea
+                  class="form-control bg-color-4 text-color-5 border-color-7"
+                  id="description"
+                  placeholder="Un classico platform senza tempo."
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="mb-2">
+                <label for="brand" class="form-label text-color-5"
+                  >Brand / Console</label
+                >
+                <input
+                  type="text"
+                  class="form-control bg-color-4 text-color-5 border-color-7"
+                  id="brand"
+                  placeholder="Nintendo"
+                  required
+                />
+              </div>
+
+              <div class="mb-2">
+                <label for="imgUrl" class="form-label text-color-5"
+                  >URL immagine</label
+                >
+                <input
+                  type="url"
+                  class="form-control bg-color-4 text-color-5 border-color-7"
+                  id="imgUrl"
+                  placeholder="https://immagine.com/supermario.jpg"
+                  required
+                />
+              </div>
+
+              <div class="mb-2">
+                <label for="price" class="form-label text-color-5"
+                  >Prezzo (€)</label
+                >
+                <input
+                  type="number"
+                  class="form-control bg-color-4 text-color-5 border-color-7"
+                  id="price"
+                  placeholder="30"
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-outline-success text-color-7 border-color-7"
+              >
+                Aggiungi Gioco
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer>
       <p class="m-0 text-color-1 text-center">
         Astro Production - <span class="text-color-5" id="year"></span>

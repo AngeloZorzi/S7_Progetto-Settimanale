@@ -39,7 +39,7 @@
                 <a
                   class="nav-link active text-color-7"
                   aria-current="page"
-                  href="#"
+                  href="./homepage.html"
                   >Home</a
                 >
               </li>
@@ -54,24 +54,31 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Console
+                  Games
                 </a>
                 <ul class="dropdown-menu bg-color-2">
                   <li>
-                    <a class="dropdown-item text-color-8" href="#">NES</a>
+                    <a class="dropdown-item text-color-8" href="#">Nintendo</a>
                   </li>
                   <li>
-                    <a class="dropdown-item text-color-8" href="#">SNES</a>
+                    <a class="dropdown-item text-color-8" href="#"
+                      >PlayStation 1</a
+                    >
                   </li>
-                  <li><hr class="dropdown-divider bg-color-4" /></li>
+
+                  <li>
+                    <a class="dropdown-item text-color-8" href="#"
+                      >PlayStation 2</a
+                    >
+                  </li>
                   <li>
                     <a class="dropdown-item text-color-8" href="#">Game Boy</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled text-color-3" aria-disabled="true"
-                  >Coming Soon</a
+                <a class="nav-link text-color-9" href="./backoffice.html"
+                  >Administration</a
                 >
               </li>
             </ul>
@@ -94,7 +101,43 @@
         </div>
       </nav>
     </header>
-    <main class="flex-grow-1"></main>
+    <main class="flex-grow-1">
+      <div class="container mt-5">
+        <div id="gameDetail" class="row justify-content-center"></div>
+        <div class="row justify-content-center mt-3">
+          <button id="deleteBtn" class="btn btn-color-10">Elimina Gioco</button>
+        </div>
+      </div>
+      <div id="editForm" class="container mt-5 d-none text-color-9">
+        <h3>Modifica Gioco</h3>
+        <form id="formEdit">
+          <div class="mb-3 bg-color-12 text-color-9">
+            <label for="editName" class="form-label">Nome Gioco</label>
+            <input type="text" class="form-control" id="editName" required />
+          </div>
+          <div class="mb-3 text-color-9">
+            <label for="editDescription" class="form-label">Descrizione</label>
+            <textarea
+              class="form-control"
+              id="editDescription"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+          <div class="mb-3 text-color-9">
+            <label for="editPrice" class="form-label">Prezzo</label>
+            <input type="number" class="form-control" id="editPrice" required />
+          </div>
+          <div class="mb-3 text-color-9">
+            <label for="editImgUrl" class="form-label">URL Immagine</label>
+            <input type="url" class="form-control" id="editImgUrl" required />
+          </div>
+          <button type="submit" class="btn btn-outline-color-11">
+            Salva Modifiche
+          </button>
+        </form>
+      </div>
+    </main>
     <footer>
       <p class="m-0 text-color-1 text-center">
         Astro Production - <span class="text-color-5" id="year"></span>
