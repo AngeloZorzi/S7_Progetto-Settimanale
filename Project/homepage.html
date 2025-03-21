@@ -77,7 +77,10 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-color-9" href="./backoffice.html"
+                <a
+                  class="nav-link text-color-9"
+                  id="adminLink"
+                  href="./backoffice.html"
                   >Administration</a
                 >
               </li>
@@ -105,6 +108,89 @@
       <div class="container d-flex flex-column">
         <h1 class="h1 text-color-6 fw-bold my-3">Products</h1>
         <div class="row" id="gameRow"></div>
+      </div>
+
+      <div
+        class="modal fade bg-color-12"
+        id="passwordModal"
+        tabindex="-1"
+        aria-labelledby="passwordModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog bg-color-12 border border-1 border-color-1 rounded rounded-3"
+        >
+          <div class="modal-content">
+            <div
+              class="modal-header bg-color-12 border border-1 border-color-1"
+            >
+              <h5 class="modal-title text-color-5" id="passwordModalLabel">
+                Accedi all'amministrazione
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-color-11"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div
+              class="modal-body bg-color-12 border border-1 border-color-1 text-light"
+            >
+              <input
+                type="password"
+                class="form-control text-bg-color-1 text-color-5"
+                id="adminPassword"
+                placeholder="Inserisci la password"
+              />
+            </div>
+            <div
+              class="modal-footer bg-color-12 border border-1 border-color-1"
+            >
+              <button
+                type="button"
+                class="btn btn-outline-color-10"
+                data-bs-dismiss="modal"
+              >
+                Annulla
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-color-11"
+                id="submitPasswordBtn"
+              >
+                Accedi
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="toast-container position-fixed bottom-0 end-0 p-3"
+        id="errorToastContainer"
+      >
+        <div
+          class="toast"
+          id="errorToast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          data-bs-delay="3000"
+        >
+          <div class="toast-header bg-color-12">
+            <strong class="me-auto text-color-9">Errore</strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body bg-color-12 text-color-9 fw-bold">
+            Password errata! Accesso negato.
+          </div>
+        </div>
       </div>
     </main>
     <footer>

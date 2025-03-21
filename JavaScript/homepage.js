@@ -48,3 +48,28 @@ const getProducts = function () {
     });
 };
 getProducts();
+
+document.getElementById("adminLink").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const passwordModal = new bootstrap.Modal(
+    document.getElementById("passwordModal")
+  );
+  passwordModal.show();
+
+  document
+    .getElementById("submitPasswordBtn")
+    .addEventListener("click", function () {
+      const password = document.getElementById("adminPassword").value;
+      const correctPassword = "Sigarette";
+      if (password === correctPassword) {
+        passwordModal.hide();
+        window.location.href = "./backoffice.html";
+      } else {
+        const errorToast = new bootstrap.Toast(
+          document.getElementById("errorToast")
+        );
+        errorToast.show();
+      }
+    });
+});
