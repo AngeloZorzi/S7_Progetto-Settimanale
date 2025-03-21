@@ -1,0 +1,18 @@
+@import "../functions";
+@import "../variables";
+//nuovi colori
+
+$color-1: #efefef;
+$color-2: #141414;
+$color-3: #7e7e7e;
+$color-4: #3f3f3f;
+
+$new-colors: (
+  "color-1": $color-1,
+  "color-2": $color-2,
+  "color-3": $color-3,
+  "color-4": $color-4,
+);
+
+$theme-colors: map-merge($theme-colors, $new-colors);
+@import "../bootstrap.scss";
