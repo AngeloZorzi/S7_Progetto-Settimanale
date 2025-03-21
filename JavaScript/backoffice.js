@@ -69,7 +69,23 @@ gameForm.addEventListener("submit", function (e) {
 });
 const form = document.getElementById("game-form");
 const resetBtn = document.getElementById("resetForm");
+const authPassword = "DRGISFORLIFE";
 
-resetBtn.addEventListener("click", () => {
-  form.reset();
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const userPass = prompt("Inserisci la password per aggiungere il gioco:");
+  if (userPass === authPassword) {
+    console.log("Gioco aggiunto con successo!");
+  } else {
+    alert("Password errata! Operazione annullata.");
+  }
+});
+
+resetBtn.addEventListener("click", function () {
+  const userPass = prompt("Inserisci la password per resettare il form:");
+  if (userPass === authPassword) {
+    form.reset();
+  } else {
+    alert("Password errata! Reset annullato.");
+  }
 });
