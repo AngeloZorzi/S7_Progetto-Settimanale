@@ -23,7 +23,9 @@ const getGameDetails = function () {
             <div class="card-body d-flex flex-column justify-content-between">
               <h5 class="card-title text-color-1">${data.name}</h5>
               <p class="card-text">${data.description}</p>
+              <p class="card-text">${data.brand}</p>
               <p class="card-text fw-bold text-color-3">Prezzo: €${data.price}</p>
+
               <a href="./homepage.html" class="btn btn-outline-color-11 text-color-10 w-100 mt-2">Torna alla lista</a>
             </div>
           </div>
