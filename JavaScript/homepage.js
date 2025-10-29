@@ -15,7 +15,7 @@ const getProducts = function () {
   fetch(APIUrl, {
     headers: {
       Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RkMWYxZDM4MzRiZjAwMTUwMDA2ZmMiLCJpYXQiOjE3NDI1NDQ2NjksImV4cCI6MTc0Mzc1NDI2OX0.Fe1metoCEo3L7Ffjh8C7qiDWYg7k-4Xjt2Cgh2sRa40",
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTAxZjU4OTZlNjUyMDAwMTUzMzEyMzIiLCJpYXQiOjE3NjE3MzYwNzMsImV4cCI6MTc2Mjk0NTY3M30.MkBpjeqlt1RAb0Rp_V6oO16R46ii1u5lpi_-HMp8hFQ",
     },
   })
     .then((response) => {
